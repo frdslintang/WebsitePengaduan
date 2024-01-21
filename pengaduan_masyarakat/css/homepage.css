@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+    color: black;
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.786), rgba(0,0,0,0));
+}
+
+header > nav{
+    padding-inline: 30px;
+    margin-bottom: 50px;
+}
+
+header > nav > ul > li{
+    margin-right: 30px;
+    color: #fff;
+    list-style: none;
+    cursor: pointer;
+}
+
+header > nav > h3 > a{
+    color: white;
+}
+
+.btn{
+    padding-inline: 30px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.btn-login{
+    margin-right: 10px;
+}
+
+/* .containerr{
+    padding-inline: 30px;
+    width: 100%;
+    display: flex;
+    padding: 12px 30px;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+.nav-item a{
+    font-weight: 500;
+}
+
+.container .navbar-brand{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(225, 41, 41);
+}
+
+.header-title{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    top: 100px;
+}
+
+.header-title p:nth-child(1){
+    line-height: 50px;
+}
+
+.header-title p:nth-child(2){
+    font-size: 1rem;
+    width: 50%;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.whistle span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 3;
+}
+
+.whistle span img {
+    display: block;
+    width: 65px;
+    height: 60px;
+    margin-bottom: 12px;
+    z-index: 2;
+}
+
+.whistle span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transform: scale(0.1);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+#mysvg{
+    position: absolute;
+    top: -370px;
+}
+
+.login-signup{
+    display: none;
+}
+
+@media screen and (max-width:767px){
+    .container{
+        text-align: center;
+    }
+    .nav-item a{
+        font-weight: 500;
+        color: rgb(225, 41, 41);
+    }
+    .container .btn-login{
+        display: none;
+    }
+    .container .btn-signup{
+        display: none;
+    }
+    .container .navbar-brand{
+        font-size: 20px;
+    }
+    .header-title p:nth-child(1){
+        line-height: 30px;
+        font-size: 25px;
+    }
+    .header-title p:nth-child(2){
+        font-size: 0.8rem;
+        width: 90%;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    #mysvg{
+        position: absolute;
+        top: -86px;
+    }
+    .whistle span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-color: white;
+        z-index: 3;
+        margin-top: 10px;
+    }
+    .whistle span img {
+        display: block;
+        width: 55px;
+        height: 50px;
+        margin-bottom: 12px;
+        z-index: 2;
+    }
+    .login-signup{
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+    }   
+    .btn-login{
+        margin-right: 0px;
+    } 
+}
+
+#about{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.about-container{
+    padding-top: 50px;
+    align-items: center;
+    width: 70%;
+}
+
+.about-container .welcome{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-container .laporcak{
+    font-size: 30px; 
+    font-weight: 700;
+    margin-inline: 5px;
+    color: rgb(225, 41, 41);
+}
+
+@media screen and (max-width:767px){
+    .about-container{
+        width: 100%;
+        padding-inline: 20px;
+    }
+    .about-container > p {
+        width: 100%;
+        text-align: center;
+    }
+    .about-container .welcome{
+        display: block;
+        line-height: 25px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .about-container .laporcak{
+        font-size: 40px; 
+        font-weight: 700;
+        margin-inline: 5px;
+        color: rgb(225, 41, 41);
+    }
+}
+
+#kriteria{
+    margin-top: 100px;
+    text-align: center;
+    width: 100%;
+}
+
+#kriteria h3{
+    font-weight: bold;
+}
+
+#kriteria span{
+    font-weight: bold;
+    color: rgb(225, 41, 41);
+}
+
+#kriteria p{
+    margin-bottom: 50px;
+}
+
+.container-box-kriteria{
+    width: 100%;
+    display: flex;
+    padding-inline: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.box-kriteria{
+    width: 30%;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.25);
+    padding: 20px 20px 0 20px;
+}
+
+.deskripsi-box-kriteria{
+    display: flex;
+    flex-direction: column;
+}
+
+.deskripsi-box-kriteria .judul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.deskripsi-box-kriteria .deskripsi-judul{
+    text-align: left;
+}
+
+.our-focus-kriteria{
+    padding-inline: 30px;
+}
+
+@media screen and (max-width:767px){
+    #kriteria{
+        width: 100%;
+    }
+    #kriteria > h3{
+        font-size: 25px;
+    }
+    #kriteria > p{
+        padding-inline: 20px;
+    }
+    .box-kriteria{
+        width: 100%;
+    }
+    .container-box-kriteria{
+        padding-inline: 20px;
+    }
+    #kriteria .our-focus-kriteria{
+        padding-inline: 10px;
+        width: 100;
+    }
+}
+
+#tatacara{
+    padding-inline: 60px;
+    margin-bottom: 50px;
+}
+
+#tatacara .laporcak{
+    background-image: url(../img/LAPORCAK!.png);
+    background-size: contain;
+    background-position: center;
+}
+
+@media screen and (max-width:767px){
+    #tatacara{
+        padding-inline: 20px;
+        margin-bottom: 50px;
+    }
+}
